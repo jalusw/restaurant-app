@@ -1,0 +1,23 @@
+@use "../utils/sass-utils" as *;
+.header {
+  padding: 14rem 0;
+  text-align: center;
+
+  color: #fff;
+  background: linear-gradient(to right, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+    url("/public/hero.jpg");
+  background-size: cover;
+
+  &__title {
+    @include font-scale(6);
+    font-weight: bold;
+  }
+
+  &__text {
+    max-width: 66ch;
+    margin: 0.5rem auto;
+
+    @include font-scale(2);
+    line-height: 1.25;
+  }
+}

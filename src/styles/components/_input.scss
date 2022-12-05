@@ -1,0 +1,13 @@
+@use "../utils/sass-utils" as *;
+.input {
+  width: 100%;
+  min-width: 44px;
+  box-sizing: border-box;
+  padding: 0 1rem;
+  @include font-scale(1);
+  font-family: inherit;
+
+  border: none;
+  border-radius: 0.25rem;
+  background-color: #f3f3f3;
+}

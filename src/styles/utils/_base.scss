@@ -1,0 +1,13 @@
+button,
+input:not([type="checkbox"]) {
+  min-height: 44px;
+  min-width: 44px;
+}
+
+img {
+  max-width: 100%;
+}
+
+body {
+  background-color: #fefefe;
+}

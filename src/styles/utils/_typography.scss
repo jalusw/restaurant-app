@@ -1,0 +1,16 @@
+@font-face {
+  font-family: "Source Sans Pro";
+  font-display: swap;
+  font-size: 400;
+  src: url("../font/sourcesanspro-regular-webfont.woff") format("woff"),
+    url("../font/sourcesanspro-regular-webfont.woff2") format("woff2");
+}
+
+:root {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: "Source Sans Pro";
+  font-size: clamp(1.6rem, 1.5rem + 0.18vw, 2rem);
+}

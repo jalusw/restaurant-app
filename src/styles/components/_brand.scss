@@ -1,0 +1,10 @@
+@use "../utils/sass-utils" as *;
+.brand {
+  display: flex;
+  align-items: center;
+  min-height: 44px;
+  @include font-scale(4);
+  color: $color-primary;
+  font-weight: bold;
+  text-decoration: none;
+}

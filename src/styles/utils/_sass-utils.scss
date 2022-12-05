@@ -1,0 +1,9 @@
+@use "sass:math";
+
+$font-ratio: 1.125;
+
+$color-primary: #d00000;
+
+@mixin font-scale($scale) {
+  font-size: 1em * math.pow($font-ratio, $scale);
+}

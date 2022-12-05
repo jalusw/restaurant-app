@@ -1,0 +1,54 @@
+.icon {
+  display: block;
+  width: 32px;
+  height: 32px;
+
+  background-size: cover;
+  background-position: center;
+  &--sm {
+    height: 1.6rem;
+    width: 1.6rem;
+  }
+  &--md {
+    height: 2rem;
+    width: 2rem;
+  }
+
+  &--lg {
+    height: 2.4rem;
+    width: 2.4rem;
+  }
+
+  &--menu {
+    background-image: url("../svg/menu.svg");
+  }
+
+  &--close {
+    background-image: url("../svg/close.svg");
+  }
+
+  &--filter {
+    background-image: url("../svg/filter.svg");
+  }
+
+  &--search {
+    background-image: url("../svg/search.svg");
+  }
+
+  &--fast-food {
+    background-image: url("../svg/fastfood.svg");
+    width: 0.9em;
+    height: 0.9em;
+  }
+
+  &--star {
+    background-image: url("../svg/star.svg");
+  }
+
+  &--pin {
+    background-image: url("../svg/pin.svg");
+  }
+  &--arrow-forward {
+    background-image: url("../svg/arrow-forward.svg");
+  }
+}

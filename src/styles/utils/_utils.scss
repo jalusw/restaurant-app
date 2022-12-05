@@ -1,0 +1,138 @@
+@use "./sass-utils" as *;
+
+.flex {
+  display: flex;
+}
+
+.flex-1 {
+  flex: 1;
+}
+
+.flex-wrap {
+  flex-wrap: wrap;
+}
+
+.justify-between {
+  justify-content: space-between;
+}
+
+.align-center {
+  align-items: center;
+}
+.align-end {
+  align-items: flex-end;
+}
+
+.grid {
+  display: grid;
+}
+
+@for $i from 1 through 12 {
+  .cols-#{$i} {
+    grid-template-columns: repeat($i, 1fr);
+  }
+  .col-span-#{$i} {
+    grid-column: span $i / span $i;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  @for $i from 1 through 12 {
+    .md-cols-#{$i} {
+      grid-template-columns: repeat($i, 1fr);
+    }
+    .md-col-span-#{$i} {
+      grid-column: span $i / span $i;
+    }
+  }
+}
+
+.container {
+  width: 96%;
+  max-width: 960px;
+  margin: auto;
+}
+
+.font-bold {
+  font-weight: bold;
+}
+
+.text-center {
+  text-align: center;
+}
+.text-md {
+  @include font-scale(1);
+}
+.text-lg {
+  @include font-scale(2);
+}
+.text-xl {
+  @include font-scale(3);
+}
+
+.text-white {
+  color: white;
+}
+
+.bg-primary {
+  background-color: $color-primary;
+}
+
+.text-primary {
+  color: $color-primary;
+}
+
+.hidden {
+  display: none;
+}
+
+.border-primary-sm {
+  border: 2px solid $color-primary;
+}
+
+.rounded-sm {
+  border-radius: 0.25rem;
+}
+
+.rounded-md {
+  border-radius: 1rem;
+}
+
+.rounded-xl {
+  border-radius: 1.5rem;
+}
+
+@for $i from 1 through 20 {
+  .gap-#{$i} {
+    gap: 0.25rem * $i;
+  }
+  .m-#{$i} {
+    margin: 0.25rem * $i;
+  }
+
+  .my-#{$i} {
+    margin-top: 0.25rem * $i;
+    margin-bottom: 0.25rem * $i;
+  }
+
+  .mx-#{$i} {
+    margin-left: 0.25rem * $i;
+    margin-right: 0.25rem * $i;
+  }
+
+  .mt-#{$i} {
+    margin-top: 0.25rem * $i;
+  }
+
+  .mb-#{$i} {
+    margin-bottom: 0.25rem * $i;
+  }
+
+  .ml-#{$i} {
+    margin-left: 0.25rem * $i;
+  }
+
+  .mr-#{$i} {
+    margin-right: 0.25rem * $i;
+  }
+}

@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Menyediakan Rekomendasi Restoran Restoran Yang Ada Di Indonesia"
+    />
+    <title>FeedME</title>
+  </head>
+  <body>
+    <div class="shadow" id="shadow-nav"></div>
+    <a class="btn btn--skip" href="#main">Skip To Main</a>
+    <nav class="nav">
+      <div class="container flex align-center">
+        <a class="brand" href="/">
+          <i class="icon icon--fast-food mr-3"></i>
+          <span> FeedME </span>
+        </a>
+        <div class="flex-1"></div>
+        <ul class="nav__links" id="nav-menu">
+          <li class="nav__item nav__item--first">
+            <button
+              class="btn btn--transparent"
+              id="btn-hide-nav-menu"
+              type="button"
+              title="Hide Navigation Menu"
+            >
+              <i class="icon icon--close icon--lg"></i>
+            </button>
+          </li>
+          <li class="nav__item">
+            <a class="nav__link nav__link--active" href="/">Home</a>
+          </li>
+          <li class="nav__item">
+            <a class="nav__link" href="#">Favourite</a>
+          </li>
+          <li class="nav__item">
+            <a class="nav__link" href="https://github.com/jalusw">About</a>
+          </li>
+        </ul>
+        <button
+          class="btn btn--transparent btn--menu"
+          id="btn-show-nav-menu"
+          type="button"
+          title="Show Navigation Menu"
+        >
+          <i class="icon icon--menu"></i>
+        </button>
+      </div>
+    </nav>
+    <header class="header">
+      <div class="container">
+        <h1 class="header__title">
+          Laper dan Bingung Mau Makan Dimana? FeedME solusinya
+        </h1>
+        <p class="header__text">
+          Kami menyediakan rekomendasi restoran - restoran yang tersedia di
+          berbagai daerah di indonesia.
+        </p>
+      </div>
+    </header>
+    <main id="main">
+      <section class="my-20">
+        <div class="container">
+          <h2 class="font-bold text-center text-xl text-primary">
+            Solusi Yang Kami Berikan Untuk Anda
+          </h2>
+          <div class="cards cards--flex mt-15">
+            <article class="card card--solution">
+              <h3 class="card__title text-primary">Jelajahi Restoran</h3>
+              <p class="card__text">
+                Kami Menyediakan Rekomendasi dan Daftar Restoran Restoran Yang
+                Tersedia Untuk Anda.
+              </p>
+            </article>
+            <article class="card card--solution">
+              <h3 class="card__title text-primary">Filter Restoran</h3>
+              <p class="card__text">
+                Kami menyediakan Fitur Filter yang dapat anda gunakan untuk
+                memfilter daftar restoran sesuai yang anda inginkan.
+              </p>
+            </article>
+            <article class="card card--solution">
+              <h3 class="card__title text-primary">Cari Restoran</h3>
+              <p class="card__text">
+                Kami juga menyediakan Fitur Search yang dapat membantu anda
+                dalam mencari restoran.
+              </p>
+            </article>
+          </div>
+        </div>
+      </section>
+      <section class="my-10">
+        <div class="container">
+          <h2 class="font-bold text-lg text-primary">Top Rated Restaurant</h2>
+          <div
+            class="cards cards--grid mt-5"
+            id="list-restaurant-top-rated"
+          ></div>
+        </div>
+      </section>
+      <section class="mt-20">
+        <div class="container">
+          <div class="flex gap-10">
+            <button class="btn" type="button" id="btn-toggle-filter">
+              <i class="icon icon--filter mr-2"></i>
+              <span>Filter</span>
+            </button>
+            <form class="flex flex-1 gap-4" id="form-search">
+              <input
+                class="input flex-1"
+                id="input-search"
+                type="text"
+                placeholder="Masukan Restoran"
+              />
+              <button class="btn btn--primary" type="submit" title="Search">
+                <i class="icon icon--search icon--md"></i>
+              </button>
+            </form>
+          </div>
+          <form class="hidden" id="form-filter">
+            <div class="grid cols-12 mt-7 gap-10">
+              <section class="col-span-12 md-col-span-3">
+                <div class="">
+                  <label for="input-rating-minimum">Rating Minimum</label>
+                  <input
+                    class="input mt-2"
+                    id="filter-rating-min"
+                    type="number"
+                    placeholder="Min Rating"
+                    value="0"
+                    min="0"
+                    max="4.9"
+                  />
+                </div>
+                <div class="mt-4">
+                  <label for="input-rating-maximum">Rating Maximum</label>
+                  <input
+                    class="input mt-2"
+                    id="filter-rating-max"
+                    type="number"
+                    placeholder="Max Rating"
+                    value="5"
+                    max="5"
+                  />
+                </div>
+              </section>
+              <section class="col-span-12 md-col-span-9">
+                <div>
+                  <span>City</span>
+                  <div
+                    class="flex flex-wrap gap-3 mt-2"
+                    id="filter-cities"
+                  ></div>
+                </div>
+              </section>
+            </div>
+            <button class="btn btn--primary mt-10" type="submit">Apply</button>
+          </form>
+          <div class="cards cards--grid mt-10" id="list-restaurant"></div>
+        </div>
+      </section>
+    </main>
+    <footer class="footer">
+      <section>
+        <div class="container flex flex-wrap gap-7 align-end">
+          <h2>
+            <a class="brand" href="/">
+              <i class="icon icon--fast-food mr-3"></i>
+              <span> FeedME </span>
+            </a>
+            <span>Help You Find A Restaurant</span>
+          </h2>
+          <div class="flex-1"></div>
+          <ul class="footer__links">
+            <li>
+              <a
+                class="footer__link"
+                href="https://github.com/jalusw"
+                rel="nofollow"
+                >About</a
+              >
+            </li>
+            <li>
+              <a class="footer__link" href="#">Privacy Policy</a>
+            </li>
+            <li>
+              <a class="footer__link" href="#">Terms Conditions</a>
+            </li>
+            <li>
+              <a class="footer__link" href="#">Support</a>
+            </li>
+          </ul>
+        </div>
+        <div class="container my-10">
+          <hr />
+        </div>
+        <div class="container">
+          <p class="text-center">© 2022 FeedME. All Rights Reserved.</p>
+        </div>
+      </section>
+    </footer>
+  </body>
+</html>
